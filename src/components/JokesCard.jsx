@@ -6,6 +6,7 @@ import {
   FaFacebookSquare,
   FaInstagramSquare,
 } from "react-icons/fa";
+import { BsFillThreadsFill } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 
 const JokesCard = () => {
@@ -46,16 +47,14 @@ const JokesCard = () => {
   return (
     <div className="w-80 p-4 bg-white rounded-lg shadow-lg border-4 border-transparent hover:border-[#6366f1] transition-all duration-300 transform hover:scale-105">
       <div>
-        <div className="flex justify-evenly text-center items-center space-x-2 border-b-4">
+      <div className="absolute top-2 right-2 flex justify-evenly items-center space-x-2 border-b-4">
           <span className="text-gray-500 font-semibold">
             Share this joke on your:
           </span>
           <button
             onClick={() =>
               window.open(
-                `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                  window.location.href
-                )}&jokes=${encodeURIComponent(joke)}`,
+                `https://www.facebook.com/sharer/sharer.php?text=${joke}}`,
                 "_blank"
               )
             }
@@ -78,15 +77,22 @@ const JokesCard = () => {
           >
             <FaXTwitter size={30} color="#14171A" className="hover:scale-105" />
           </button>
-          {/* <button
-            onClick={() => window.open("https://www.instagram.com/", "_blank")}
+          <button
+            onClick={() =>
+              window.open(
+                `https://www.threads.net/intent/post?text=${encodeURIComponent(
+                  joke
+                )}`,
+                "_blank"
+              )
+            }
           >
-            <FaInstagramSquare
+            <BsFillThreadsFill
               size={30}
-              color="#C13584"
+              color="#14171A"
               className="hover:scale-105"
             />
-          </button> */}
+          </button>
         </div>
       </div>
 

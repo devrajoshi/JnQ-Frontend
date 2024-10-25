@@ -13,12 +13,12 @@ const NavBar = () => {
     //   path: "/",
     // },
     {
-      id: 2,
+      id: 1,
       link: "sign-up",
       path: "/sign-up",
     },
     {
-      id: 3,
+      id: 2,
       link: "login",
       path: "/login",
     },
@@ -32,7 +32,7 @@ const NavBar = () => {
       </div>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:!flex">
+      <ul className="hidden sm:!flex">
         {links.map(({ id, link, path }) => (
           <li
             key={id}
@@ -58,7 +58,7 @@ const NavBar = () => {
       {/* Hamburger Menu */}
       <div
         onClick={() => setNav(!nav)}
-        className="pr-4 z-10 cursor-pointer text-violet-700 hover:scale-105 hover:text-yellow-400 duration-200 md:hidden"
+        className="pr-4 z-10 cursor-pointer text-violet-700 hover:scale-105 hover:text-yellow-400 duration-200 sm:hidden"
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>

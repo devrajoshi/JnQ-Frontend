@@ -6,6 +6,7 @@ import {
   FaFacebookSquare,
   FaInstagramSquare,
 } from "react-icons/fa";
+import { BsFillThreadsFill } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 
 const QuotesCard = () => {
@@ -53,8 +54,8 @@ const QuotesCard = () => {
   return (
     <div className="relative w-80 p-4 bg-white rounded-lg shadow-lg border-4 border-transparent hover:border-[#d946ef] transition-all duration-300 transform hover:scale-105">
       {/* Social Media Sharing Buttons */}
-      {/* <div className="absolute top-2 right-2 flex justify-evenly items-center space-x-2 border-b-4"> */}
-      <div className="flex justify-evenly items-center space-x-2 border-b-4">
+      <div className="absolute top-2 right-2 flex justify-evenly items-center space-x-2 border-b-4">
+      
         <span className="text-gray-500 font-semibold">
           Share this quote on your:
         </span>
@@ -91,16 +92,24 @@ const QuotesCard = () => {
           <FaXTwitter size={30} color="#14171A" className="hover:scale-105" />
         </button>
 
-        {/* Instagram (no direct share API) */}
-        {/* <button
-          onClick={() => window.open("https://www.instagram.com/", "_blank")}
-        >
-          <FaInstagramSquare
-            size={30}
-            color="#C13584"
-            className="hover:scale-105"
-          />
-        </button> */}
+        {/* Instagram threads share  button */}
+
+        <button
+            onClick={() =>
+              window.open(
+                `https://www.threads.net/intent/post?text=${encodeURIComponent(
+                  `${quote} - ${author}`
+                )}`,
+                "_blank"
+              )
+            }
+          >
+            <BsFillThreadsFill
+              size={30}
+              color="#14171A"
+              className="hover:scale-105"
+            />
+          </button>
       </div>
 
       <h2 className="text-2xl pt-8 font-bold text-center">

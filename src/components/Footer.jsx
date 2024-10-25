@@ -10,7 +10,7 @@ import { MdAttachEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 text-black py-4 mt-auto">
+    <footer className="w-full bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 text-white py-4 mt-auto">
       <div className="flex justify-center items-center md:space-x-4 space-y-4 md:space-y-0 gap-1">
         <p className="text-center md:text-left">Contact me:</p>
         <button onClick={() => window.open("https://www.facebook.com/p/devraj-joshi-100008626361991/", "_blank")}>
