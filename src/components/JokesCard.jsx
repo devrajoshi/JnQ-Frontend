@@ -47,14 +47,16 @@ const JokesCard = () => {
   return (
     <div className="w-80 p-4 bg-white rounded-lg shadow-lg border-4 border-transparent hover:border-[#6366f1] transition-all duration-300 transform hover:scale-105">
       <div>
-      <div className="absolute top-2 right-2 flex justify-evenly items-center space-x-2 border-b-4">
+        <div className="absolute top-2 right-2 flex justify-evenly items-center space-x-2 border-b-4">
           <span className="text-gray-500 font-semibold">
             Share this joke on your:
           </span>
           <button
             onClick={() =>
               window.open(
-                `https://www.facebook.com/sharer/sharer.php?text=${joke}}`,
+                `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                  window.location.href
+                )}&quote=${joke}`,
                 "_blank"
               )
             }

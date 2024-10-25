@@ -13,7 +13,7 @@ const Footer = () => {
     <footer className="w-full bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 text-white py-4 mt-auto">
       <div className="flex justify-center items-center md:space-x-4 space-y-4 md:space-y-0 gap-1">
         <p className="text-center md:text-left">Contact me:</p>
-        <button onClick={() => window.open("https://www.facebook.com/p/devraj-joshi-100008626361991/", "_blank")}>
+        <button onClick={() => window.open("https://www.facebook.com/debraz.zocee", "_blank")}>
           <FaFacebookSquare size={30} color="#1877F2" className="hover:scale-105" />
         </button>
         <button onClick={() => window.open("https://x.com/devrajoshi444", "_blank")}>
