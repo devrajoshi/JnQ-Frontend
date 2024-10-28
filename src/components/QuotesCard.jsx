@@ -116,22 +116,25 @@ const QuotesCard = () => {
         Inspiring Quotes 🧠💭
       </h2>
       <div className="flex justify-center items-center h-48">
-        {loading ? (
-          <span className="text-5xl animate-bounce">
-            <RiQuillPenFill />
-          </span>
-        ) : (
-          <div className="relative text-center">
-            <p className="text-lg italic mb-6">{quote}</p>{" "}
-            {/* Add bottom margin */}
-            {author && (
-              <p className="absolute bottom-0 right-0 text-sm text-gray-600 italic">
-                - {author}
-              </p>
-            )}
-          </div>
-        )}
-      </div>
+  {loading ? (
+    <div className="flex flex-col items-center">
+      <span className="text-5xl text-indigo-700 animate-writing">
+        <RiQuillPenFill />
+      </span>
+      <p className="text-center pt-2">Loading...</p>
+    </div>
+  ) : (
+    <div className="relative text-center">
+      <p className="text-lg italic mb-6">{quote}</p>
+      {author && (
+        <p className="absolute bottom-0 right-0 text-sm text-gray-600 italic">
+          - {author}
+        </p>
+      )}
+    </div>
+  )}
+</div>
+
 
       {/* Button Section */}
       <div className="flex space-x-2 mt-4">

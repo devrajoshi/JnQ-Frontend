@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { LiaLaughSquintSolid } from "react-icons/lia";
 import {
-  FaTwitterSquare,
   FaFacebookSquare,
   FaInstagramSquare,
 } from "react-icons/fa";
@@ -101,9 +100,12 @@ const JokesCard = () => {
       <h2 className="text-2xl pt-8 font-bold text-center">Funny Jokes 😂😆</h2>
       <div className="flex justify-center items-center text-center h-48">
         {loading ? (
-          <span className="text-5xl animate-bounce">
-            <LiaLaughSquintSolid />
-          </span>
+          <div className="flex flex-col items-center">
+      <span className="text-5xl text-yellow-600 animate-writing">
+        <LiaLaughSquintSolid />
+      </span>
+      <p className="text-center pt-2">Loading...</p>
+    </div>
         ) : (
           <p className="text-lg font-sans">{joke}</p>
         )}
