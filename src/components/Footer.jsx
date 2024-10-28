@@ -30,7 +30,7 @@ const Footer = () => {
         </button>
       </div>
       <p className="text-center text-sm mt-2 px-4">
-        © 2024 | Jokes & Quotes. All rights reserved. | Devraj Joshi
+        © 2024 | Jokes & Quotes | Devraj Joshi
       </p>
     </footer>
   );
