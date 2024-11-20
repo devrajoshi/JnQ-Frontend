@@ -17,7 +17,8 @@ const JokesCard = () => {
     setLoading(true);
     setCopied(false); // Reset copied status when fetching a new joke
     try {
-      const response = await axios.get("https://jnq-api-dj.onrender.com/jokes");
+      // const response = await axios.get("https://jnq-api-dj.onrender.com/jokes");
+      const response = await axios.get("http://localhost:5000/jokes");
       const randomJoke =
         response.data.jokes[Math.floor(Math.random() * 889 + 1)];
       setJoke(randomJoke.joke);
@@ -101,7 +102,7 @@ const JokesCard = () => {
       <div className="flex justify-center items-center text-center h-48">
         {loading ? (
           <div className="flex flex-col items-center">
-            <span className="text-5xl text-yellow-500 animate-writing">
+            <span className="text-5xl text-yellow-600 animate-writing">
               <FaRegLaughBeam />
             </span>
             <p className="text-center pt-2">Loading...</p>

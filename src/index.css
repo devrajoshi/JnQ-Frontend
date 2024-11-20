@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  @keyframes color-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .bg-floating-colors {
+    background: linear-gradient(
+      270deg,
+      #ff6b4f,
+      #feb361,
+      #835edb,
+      #3498fc,
+      #f98a2e,
+      #ffcc33,
+      #5fab34,
+      #a1df73,
+      #ff8f6b,
+      #ffa875,
+      #764be4,
+      #4287f5,
+      #f7801a,
+      #ffe14a,
+      #49c142,
+      #b7f28c,
+      #ff9c7f,
+      #ffba92,
+      #6c4df3,
+      #529dfd
+    );
+    background-size: 200% 200%;
+    animation: color-shift 64s infinite ease-in-out;
+  }
+}

@@ -8,10 +8,11 @@ const QuotesCard = lazy(() => import("./components/QuotesCard"));
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 overflow-x-hidden">
+    <div className="relative min-h-screen flex flex-col items-center justify-start overflow-x-hidden bg-floating-colors bg-200% animate-color-shift">
+      {/* Content */}
       <NavBar />
       <div className="pt-4 pb-8 w-full max-w-4xl px-4">
-        <h1 className="text-4xl font-bold text-center font-heading mb-6 text-[#55356E]">
+        <h1 className="text-4xl font-bold text-center font-heading mb-6 text-white">
           Funny Jokes and Inspiring Quotes
         </h1>
 

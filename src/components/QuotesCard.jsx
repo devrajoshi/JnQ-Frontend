@@ -19,8 +19,11 @@ const QuotesCard = () => {
     setLoading(true);
     try {
       // Fetch the quotes data from API
+      // const response = await axios.get(
+      //   "https://jnq-api-dj.onrender.com/quotes"
+      // );
       const response = await axios.get(
-        "https://jnq-api-dj.onrender.com/quotes"
+        "http://localhost:5000/quotes"
       );
 
       // Assuming the response is an array of quotes

@@ -17,6 +17,17 @@ module.exports = {
       },
       animation: {
         writing: "write 1s ease-in-out infinite",
+        "color-float": "color-shift 5s ease infinite",
+      },
+      backgroundSize: {
+        "200%": "200% 200%",
+      },
+      keyframes: {
+        "color-shift": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
       },
     },
   },
