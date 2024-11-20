@@ -17,8 +17,8 @@ const JokesCard = () => {
     setLoading(true);
     setCopied(false); // Reset copied status when fetching a new joke
     try {
-      // const response = await axios.get("https://jnq-api-dj.onrender.com/jokes");
-      const response = await axios.get("http://localhost:5000/jokes");
+      const response = await axios.get("https://jnq-api-dj.onrender.com/jokes");
+      // const response = await axios.get("http://localhost:5000/jokes");
       const randomJoke =
         response.data.jokes[Math.floor(Math.random() * 889 + 1)];
       setJoke(randomJoke.joke);
