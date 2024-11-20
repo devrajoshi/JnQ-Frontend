@@ -14,6 +14,11 @@ module.exports = {
           "0%, 100%": { transform: "translateX(0) rotate(-15deg)" },
           "50%": { transform: "translateX(20px) rotate(15deg)" },
         },
+        "color-shift": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
       },
       animation: {
         writing: "write 1s ease-in-out infinite",
@@ -21,13 +26,6 @@ module.exports = {
       },
       backgroundSize: {
         "200%": "200% 200%",
-      },
-      keyframes: {
-        "color-shift": {
-          "0%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
-          "100%": { backgroundPosition: "0% 50%" },
-        },
       },
     },
   },
