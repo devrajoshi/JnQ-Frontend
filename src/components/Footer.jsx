@@ -29,9 +29,9 @@ const Footer = () => {
           <MdAttachEmail size={30} color="#E3E3E3" className="hover:scale-105" />
         </button>
       </div>
-      <p className="text-center text-sm mt-2 px-4">
-        © 2024 | Jokes & Quotes | Devraj Joshi
-      </p>
+      <p className="text-center text-sm mt-2">
+  © {new Date().getFullYear()} | Jokes & Quotes. All rights reserved. || Devraj Joshi
+</p>
     </footer>
   );
 };
